@@ -11,9 +11,8 @@ char* readString(FILE *file){
     char *line = NULL;
     size_t bufferSize = 0;
     size_t charactersRead;
-
+    fopen(file, "r");
     charactersRead = getline(&line, &bufferSize, file);
-
     if (charactersRead == -1){
         free(line);
         return NULL;
@@ -24,13 +23,15 @@ char* readString(FILE *file){
         }
         return line;
     }
+    fclose(file);
 }
 
 
 char* mysteryExplode(const char* str){
-    char final[99];
+    char* final;
+    final = (char*)malloc(99);
     for(int i = 0; str[i] != '\0'; i++){
         strncpy(final, str, i);
-        printf("%s\n", final);
+        return final;
     }
 }
