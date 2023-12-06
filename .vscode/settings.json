@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/dj3301/csci-320-lab1_DyamiBrown",
+            "binaryPath": "/home/dj3301/csci-320-lab1_DyamiBrown/explode",
+            "binaryArgs": []
+        }
+    ]
+}

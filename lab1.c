@@ -11,8 +11,8 @@ char* readString(FILE *file){
     char *line = NULL;
     size_t bufferSize = 0;
     size_t charactersRead;
-    fopen(file, "r");
-    charactersRead = getline(&line, &bufferSize, file);
+    fp = fopen(file, "r");
+    charactersRead = getline(&line, &bufferSize, fp);
     if (charactersRead == -1){
         free(line);
         return NULL;
@@ -23,7 +23,7 @@ char* readString(FILE *file){
         }
         return line;
     }
-    fclose(file);
+    fclose(fp);
 }
 
 
